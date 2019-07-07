@@ -54,7 +54,7 @@ console.log(encryptedText)
  * and when you try to decrypt, make sure that `encoding` and `key` that you pass is same with the encryption prosess before
  */
 import { decrypt } from 'strong-cryptor'
-const decryptedText = decrypt(encryptedText, KEY, 'hex', '$')
+const decryptedText = decrypt(encryptedText, KEY, 'hex')
 // Hello guys, i am just plain text
 console.log(decryptedText)
 ```
