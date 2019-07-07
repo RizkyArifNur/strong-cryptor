@@ -1,0 +1,15 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended", "tslint-config-prettier", "tslint-config-standard"],
+  "jsRules": {},
+  "rules": {
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore", "require-const-for-all-caps"],
+    "space-before-function-paren": false,
+    "comment-type": [false, "doc", "multiline"],
+    "member-access": false,
+    "only-arrow-functions": false,
+    "no-console": false,
+    "no-unused-variable": true
+  },
+  "rulesDirectory": []
+}

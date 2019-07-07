@@ -1,0 +1,106 @@
+{
+  "name": "strong-cryptor",
+  "version": "0.0.0-semantically-released",
+  "description": "Strong encryptor and decryptor nodejs",
+  "main": "dist/index.js",
+  "author": "Rizky Arif Nur Choir",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RizkyArifNur/strong-cryptor.git"
+  },
+  "scripts": {
+    "lint": "tslint --project tsconfig.json && tslint --project __test__/tsconfig.json -c ./tslint.json",
+    "lintTest": "tslint --project __test__/tsconfig.json -c ./tslint.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/*.ts\" \"__test__/*.ts\"",
+    "start": "ts-node src",
+    "test": "jest --verbose",
+    "start-example": "ts-node example/index.ts",
+    "semantic-release": "semantic-release",
+    "commit": "git-cz"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.0.12",
+    "cz-conventional-changelog": "2.1.0",
+    "husky": "^3.0.0",
+    "jest": "^24.8.0",
+    "lint-staged": "^9.0.2",
+    "prettier": "^1.18.2",
+    "semantic-release": "^15.13.18",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.5.2"
+  },
+  "keywords": [
+    "encrypt",
+    "decrypt",
+    "security",
+    "crypto",
+    "encryption",
+    "decryption"
+  ],
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "collectCoverage": false,
+    "testRegex": "(/__test__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "rootDir": ".",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "./tsconfig.json"
+      }
+    },
+    "testEnvironment": "node",
+    "transformIgnorePatterns": [
+      "node_modules"
+    ],
+    "testPathIgnorePatterns": [
+      "/build/",
+      "/config/",
+      "/data/",
+      "/dist/",
+      "/node_modules/",
+      "/vendor/"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && yarn test"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "yarn format",
+      "yarn lint",
+      "git add"
+    ],
+    "__test__/*.ts": [
+      "yarn format",
+      "yarn lint",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
