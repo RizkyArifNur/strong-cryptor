@@ -66,12 +66,12 @@
       "node_modules"
     ],
     "testPathIgnorePatterns": [
-      "/build/",
-      "/config/",
-      "/data/",
-      "/dist/",
-      "/node_modules/",
-      "/vendor/"
+      "<rootDir>/build/",
+      "<rootDir>/config/",
+      "<rootDir>/data/",
+      "<rootDir>/dist/",
+      "<rootDir>/node_modules/",
+      "<rootDir>/vendor/"
     ],
     "moduleDirectories": [
       "node_modules"
