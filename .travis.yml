@@ -7,7 +7,7 @@ node_js:
 
 install:
   - yarn
-  - ls -A
+  - yarn build
 jobs:
   include:
     # Define the release stage that runs semantic-release
