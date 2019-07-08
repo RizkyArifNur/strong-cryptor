@@ -24,6 +24,7 @@
     "@types/jest": "^24.0.15",
     "@types/node": "^12.0.12",
     "cz-conventional-changelog": "2.1.0",
+    "husky": "^3.0.0",
     "jest": "^24.8.0",
     "lint-staged": "^9.0.2",
     "prettier": "^1.18.2",
@@ -102,7 +103,5 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "dependencies": {
-    "husky": "^3.0.0"
-  }
+  "dependencies": {}
 }
