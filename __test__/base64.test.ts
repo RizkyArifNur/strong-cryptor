@@ -8,7 +8,7 @@ describe('Test Base64 encryption', () => {
 
   it('Should return a base64 string', () => {
     const encryptedDataWithSeparator = encrypt(text, key, 'base64')
-    const { ivString, encryptedDataString } = getIvAndEncryptedDataOnly(encryptedDataWithSeparator)
+    const { ivString, encryptedDataString } = getIvAndEncryptedDataOnly(encryptedDataWithSeparator, 'base64')
     expect(base64Regex.test(ivString)).toBe(true)
     expect(base64Regex.test(encryptedDataString)).toBe(true)
   })
@@ -19,12 +19,6 @@ describe('Test Base64 encryption', () => {
     expect(decrypted).toBe(text)
   })
 
-  it('Should work with custom separator', () => {
-    const encrypted = encrypt(text, key, 'base64', '#')
-    const decrypted = decrypt(encrypted, key, 'base64', '#')
-    expect(decrypted).toBe(text)
-  })
-
   it('Should throw malformated error', () => {
     try {
       decrypt('as2#', key, 'base64')
@@ -32,44 +26,6 @@ describe('Test Base64 encryption', () => {
       expect(error instanceof ErrorProvider).toBe(true)
       if (error instanceof ErrorProvider) {
         expect(error.code).toBe('MALFORMATED')
-      }
-    }
-  })
-
-  it('Should throw invalid separator error', () => {
-    try {
-      decrypt('asas', key, 'base64', 'A')
-    } catch (error) {
-      expect(error instanceof ErrorProvider).toBe(true)
-      if (error instanceof ErrorProvider) {
-        expect(error.code).toBe('INVALID_SEPARATOR')
-      }
-    }
-
-    try {
-      decrypt('asas', key, 'base64', ':#')
-    } catch (error) {
-      expect(error instanceof ErrorProvider).toBe(true)
-      if (error instanceof ErrorProvider) {
-        expect(error.code).toBe('INVALID_SEPARATOR')
-      }
-    }
-
-    try {
-      encrypt('asas', key, 'base64', 'A')
-    } catch (error) {
-      expect(error instanceof ErrorProvider).toBe(true)
-      if (error instanceof ErrorProvider) {
-        expect(error.code).toBe('INVALID_SEPARATOR')
-      }
-    }
-
-    try {
-      encrypt('asas', key, 'base64', ':#')
-    } catch (error) {
-      expect(error instanceof ErrorProvider).toBe(true)
-      if (error instanceof ErrorProvider) {
-        expect(error.code).toBe('INVALID_SEPARATOR')
       }
     }
   })
@@ -85,7 +41,7 @@ describe('Test Base64 encryption', () => {
     }
 
     try {
-      decrypt('asas', '', 'base64', ':#')
+      decrypt('asas', '', 'base64')
     } catch (error) {
       expect(error instanceof ErrorProvider).toBe(true)
       if (error instanceof ErrorProvider) {
@@ -94,7 +50,7 @@ describe('Test Base64 encryption', () => {
     }
 
     try {
-      encrypt('asas', 'as2', 'base64', 'A')
+      encrypt('asas', 'as2', 'base64')
     } catch (error) {
       expect(error instanceof ErrorProvider).toBe(true)
       if (error instanceof ErrorProvider) {
@@ -103,7 +59,7 @@ describe('Test Base64 encryption', () => {
     }
 
     try {
-      encrypt('asas', '', 'base64', ':#')
+      encrypt('asas', '', 'base64')
     } catch (error) {
       expect(error instanceof ErrorProvider).toBe(true)
       if (error instanceof ErrorProvider) {

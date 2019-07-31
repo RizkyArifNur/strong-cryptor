@@ -1,15 +1,24 @@
-import { IIvAndEncryptedData } from './typings'
+import { Encoding, IIvAndEncryptedData } from './typings'
 
-export function getIvAndEncryptedDataOnly(
-  encryptedDataWithSeparator: string,
-  separator: string = ':'
-): IIvAndEncryptedData {
+export function getIvAndEncryptedDataOnly(encryptedData: string, encoding: Encoding): IIvAndEncryptedData {
   /**
    * and get the iv and encrypted data by excluding the separator
    */
-  const [ivString, encryptedDataString] = encryptedDataWithSeparator.split(separator)
-  return {
-    encryptedDataString,
-    ivString
+  switch (encoding) {
+    case 'base64':
+      return {
+        encryptedDataString: encryptedData.substring(22, encryptedData.length),
+        ivString: encryptedData.substring(0, 22)
+      }
+
+    case 'hex':
+      return {
+        encryptedDataString: encryptedData.substring(32, encryptedData.length),
+        ivString: encryptedData.substring(0, 32)
+      }
   }
+}
+
+export function removeBase64Padding(encodedString: string) {
+  return encodedString.replace(/={1,2}$/, '')
 }
