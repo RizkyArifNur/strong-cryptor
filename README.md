@@ -4,10 +4,14 @@ Strong encryption and decryption node js
 
 ![Travis (.org)](https://img.shields.io/travis/RizkyArifNur/strong-cryptor.svg)
 
-strong-cryptor is utility to manage strong encryption and decryption with **aes-256-cbc** algorithm, idea behind this project is to
+strong-cryptor is lightweight utility to manage strong encryption and decryption with **aes-256-cbc** algorithm, strong-cryptor not using any depedencies, idea behind this project is to
 avoid the same pattern every encrypted data that can be learned by attacker and make it easy to decrypted by the attacker.
 
 with strong-cryptor every encryption process will have different result, even the data is same
+
+## Whats new in v2.0.0 ?
+
+in this version there is no separator needed, so it's will make the encryption more secure
 
 ## Basic Concept
 
@@ -44,7 +48,7 @@ const KEY = 'AHBSGTEUET125STSGBDHDJKXMPLKIU12' // must be 32 characters
 const text = 'Hello guys, i am just plain text'
 const encryptedText = encrypt(text, KEY, 'hex')
 console.log(encryptedText)
-// a0aade621f5e00dd21543ad2b229620d:0acfa794e2ac705670be3650f0566e697569b22c138006f0d3fbb7618dd5efa2881b48bf3a9baa70b864ca0cc9e0b568
+// a0aade621f5e00dd21543ad2b229620d0acfa794e2ac705670be3650f0566e697569b22c138006f0d3fbb7618dd5efa2881b48bf3a9baa70b864ca0cc9e0b568
 ```
 
 ### Decryption
