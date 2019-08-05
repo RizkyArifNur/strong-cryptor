@@ -9,7 +9,7 @@ avoid the same pattern every encrypted data that can be learned by attacker and 
 
 with strong-cryptor every encryption process will have different result, even the data is same
 
-## Whats new in v2.0.0 ?
+## Whats new in v2.x.x
 
 in this version there is no separator needed, so it's will make the encryption more secure
 
