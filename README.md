@@ -63,4 +63,5 @@ const decryptedText = decrypt(encryptedText, KEY, 'hex')
 console.log(decryptedText)
 ```
 
+
 for more example you can see in the [example](https://github.com/RizkyArifNur/strong-cryptor/tree/master/example) folder
