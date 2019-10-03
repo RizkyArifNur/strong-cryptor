@@ -1,3 +1,4 @@
+import crypto from 'crypto'
 import { Encoding, IIvAndEncryptedData } from './typings'
 
 export function getIvAndEncryptedDataOnly(encryptedData: string, encoding: Encoding): IIvAndEncryptedData {
@@ -18,4 +19,8 @@ export function getIvAndEncryptedDataOnly(encryptedData: string, encoding: Encod
 
 export function removeBase64Padding(encodedString: string) {
   return encodedString.replace(/={1,2}$/, '')
+}
+
+export function genKey(): string {
+  return crypto.randomBytes(16).toString('hex')
 }
