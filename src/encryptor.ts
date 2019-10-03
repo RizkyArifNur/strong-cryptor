@@ -1,7 +1,7 @@
 import crypto from 'crypto'
 import { ALGORITHM, IV_LENGTH } from './config'
 import { InvalidKeyError } from './provider'
-import { Encoding } from './typings'
+import { Encoding, IEncryptionOptions } from './typings'
 import { removeBase64Padding } from './utils'
 /**
  * encrypt the given text with aes-256-cbc encryption algorithm
@@ -9,11 +9,7 @@ import { removeBase64Padding } from './utils'
  * @param key (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data, please store it in the safe places
  * @param encoding string/text encoding you can choose `base64`(default) or `hex`
  */
-export function encrypt(text: string, key: string, encoding: Encoding = 'base64') {
-  if (key.length !== 32) {
-    throw new InvalidKeyError('Key must be 32 characters')
-  }
-
+export function encryptor(text: string, key: string, encoding: Encoding = 'base64') {
   /**
    * this expression will create a random Initialization Vector(IV)
    * for every encrypted data
@@ -36,4 +32,23 @@ export function encrypt(text: string, key: string, encoding: Encoding = 'base64'
   /**
    * the result of this function will be like this [IV][EncryptedData]
    */
+}
+
+/**
+ * encrypt the given text with aes-256-cbc encryption algorithm
+ * @param text string that will be encrypted
+ * @param key (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data, please store it in the safe places
+ * @param options encryption options
+ */
+export function encrypt(text: string, key: string, options: IEncryptionOptions = {}) {
+  if (key.length !== 32) {
+    throw new InvalidKeyError('Key must be 32 characters')
+  }
+  const encryptionCount = options.encryptionCount || 1
+  const encoding = options.encoding || 'base64'
+  let result = text
+  for (let i = 1; i <= encryptionCount; i++) {
+    result = encryptor(result, key, encoding)
+  }
+  return result
 }
