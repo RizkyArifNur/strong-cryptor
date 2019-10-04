@@ -1,6 +1,6 @@
 import { decrypt, encrypt } from '../src'
 const KEY = 'AHBSGTEUET125STSGBDHDJKXMPLKIU12'
-const text = 'Hello guys, i am just plain text'
+const text = 'Your sensitive data'
 
 /**
  * your can simply encrypt your data like this
@@ -21,7 +21,37 @@ console.log('second encryption', secondEncryptedtext)
  */
 const firstDecryptedText = decrypt(firstEncryptedText, KEY, {})
 const secondDecryptedtext = decrypt(secondEncryptedtext, KEY, {})
-// Hello guys, i am just plain text
+// Your sensitive data
 console.log('first decryption', firstDecryptedText)
-// Hello guys, i am just plain text
+// Your sensitive data
 console.log('second decryption', secondDecryptedtext)
+
+/**
+ * encryption encoding
+ */
+
+/**
+ * you can select your encryption encoding by filling up the third parameter (encryption options)
+ */
+const hexEncryptionEncoding = encrypt(text, KEY, { encoding: 'hex' })
+
+/**
+ * to decrypt it, you must pass the encoding too
+ */
+const hexDecryptionEncoding = decrypt(hexEncryptionEncoding, KEY, { encoding: 'hex' })
+console.log(hexDecryptionEncoding) // Your sensitive data
+
+/**
+ * encryption count
+ */
+
+/**
+ * you can set your encryption count by filling up the third parameter (encryption options)
+ */
+const encryptionCount = encrypt(text, KEY, { encryptionCount: 5 })
+
+/**
+ * to decrypt it, you must pass the encoding too
+ */
+const decryptionCount = decrypt(encryptionCount, KEY, { encryptionCount: 5 })
+console.log(decryptionCount) // Your sensitive data
