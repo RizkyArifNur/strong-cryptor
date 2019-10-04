@@ -18,6 +18,7 @@
     "test": "jest --verbose",
     "start-example": "ts-node example/index.ts",
     "semantic-release": "semantic-release",
+    "gen-doc": "typedoc --plugin typedoc-plugin-markdown --out ./doc ./src",
     "commit": "git-cz"
   },
   "devDependencies": {
@@ -34,6 +35,8 @@
     "tslint": "^5.18.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-config-standard": "^8.0.1",
+    "typedoc": "^0.15.0",
+    "typedoc-plugin-markdown": "^2.2.7",
     "typescript": "^3.5.2"
   },
   "keywords": [
