@@ -2,7 +2,7 @@
 
 Pure javascript/typescript encryption without any depedencies
 ![Travis (.org)](https://img.shields.io/travis/RizkyArifNur/strong-cryptor.svg)
-
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/27eea75361be475789b36c15c25db8bf)](https://www.codacy.com/manual/RizkyArifNur/strong-cryptor?utm_source=github.com&utm_medium=referral&utm_content=RizkyArifNur/strong-cryptor&utm_campaign=Badge_Grade)
 **_strong-cryptor_** is lightweight utility to manage strong encryption and decryption with **aes-256-cbc** algorithm, strong-cryptor not using any depedencies to process the encryption and decryption, with **_strong-cryptor_** you can simplify the process of encryption and decryption as simple as just calling `encrypt()` and `decrypt` function. This library is pure Javascript library built with Typescript targeting ECMAScript 5(ES5), so it's compatible with most Node.Js backend or Javascript frontend applications.
 
 ## List of Contents
