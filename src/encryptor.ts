@@ -8,8 +8,9 @@ import { removeBase64Padding } from './utils'
  * @param text string that will be encrypted
  * @param key (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data, please store it in the safe places
  * @param encoding string/text encoding you can choose `base64`(default) or `hex`
+ * @returns return encrypted string with selected encoding
  */
-export function encryptor(text: string, key: string, encoding: Encoding = 'base64') {
+function encryptor(text: string, key: string, encoding: Encoding = 'base64') {
   /**
    * this expression will create a random Initialization Vector(IV)
    * for every encrypted data
@@ -38,7 +39,8 @@ export function encryptor(text: string, key: string, encoding: Encoding = 'base6
  * encrypt the given text with aes-256-cbc encryption algorithm
  * @param text string that will be encrypted
  * @param key (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data, please store it in the safe places
- * @param options encryption options
+ * @param options encryption options, see [[IEncryptionOptions]] for more details
+ * @returns return encrypted string with selected encoding
  */
 export function encrypt(text: string, key: string, options: IEncryptionOptions = {}) {
   if (key.length !== 32) {

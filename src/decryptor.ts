@@ -9,8 +9,9 @@ import { getIvAndEncryptedDataOnly } from './utils'
  * @param encryptedData encrypted string
  * @param key (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data (must be same with the encryption process), please store it in the safe places
  * @param encoding string/text encoding you can choose `base64`(default) or `hex` (must be same with the encryption process)
+ * @returns return decrypted string
  */
-export function decryptor(encryptedData: string, key: string, encoding: Encoding = 'base64') {
+function decryptor(encryptedData: string, key: string, encoding: Encoding = 'base64') {
   if (key.length !== 32) {
     throw new InvalidKeyError('Key must be 32 characters')
   }
@@ -37,7 +38,8 @@ export function decryptor(encryptedData: string, key: string, encoding: Encoding
  * decrypt the encrypted data from strong-cryptor
  * @param encryptedData encrypted string
  * @param key (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data (must be same with the encryption process), please store it in the safe places
- * @param options decryption options
+ * @param options decryption options, see [[IDecryptionOptions]] for more details
+ * @returns return decrypted string
  */
 export function decrypt(encryptedString: string, key: string, options: IDecryptionOptions = {}) {
   const encryptionCount = options.encryptionCount || 1
