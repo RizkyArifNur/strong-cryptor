@@ -1,8 +1,12 @@
 # StrongCryptor
 
 Pure javascript/typescript encryption without any depedencies
+<br />
+
 ![Travis (.org)](https://img.shields.io/travis/RizkyArifNur/strong-cryptor.svg)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/27eea75361be475789b36c15c25db8bf)](https://www.codacy.com/manual/RizkyArifNur/strong-cryptor?utm_source=github.com&utm_medium=referral&utm_content=RizkyArifNur/strong-cryptor&utm_campaign=Badge_Grade)
+<br/>
+
 **_strong-cryptor_** is lightweight utility to manage strong encryption and decryption with **aes-256-cbc** algorithm, strong-cryptor not using any depedencies to process the encryption and decryption, with **_strong-cryptor_** you can simplify the process of encryption and decryption as simple as just calling `encrypt()` and `decrypt` function. This library is pure Javascript library built with Typescript targeting ECMAScript 5(ES5), so it's compatible with most Node.Js backend or Javascript frontend applications.
 
 ## List of Contents
@@ -89,7 +93,7 @@ List of **_strong-cryptor_** functions.
 
 ### encrypt
 
-▸ **encrypt**(`text`: string, `key`: string, `options`: [IEncryptionOptions](../interfaces/_typings_interface_index_.iencryptionoptions.md)): _string_
+▸ **encrypt**(`text`: string, `key`: string, `options`: [IEncryptionOptions](https://github.com/RizkyArifNur/strong-cryptor/tree/master/doc/interfaces/_typings_interface_index_.iencryptionoptions.md)): _string_
 
 _Defined in [encryptor.ts:45](https://github.com/RizkyArifNur/strong-cryptor/blob/6f3177b/src/encryptor.ts#L45)_
 
@@ -97,11 +101,11 @@ encrypt the given text with aes-256-cbc encryption algorithm
 
 **Parameters:**
 
-| Name      | Type                                                                                | Default | Description                                                                                                                  |
-| --------- | ----------------------------------------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `text`    | string                                                                              | -       | string that will be encrypted                                                                                                |
-| `key`     | string                                                                              | -       | (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data, please store it in the safe places          |
-| `options` | [IEncryptionOptions](../interfaces/_typings_interface_index_.iencryptionoptions.md) | {}      | encryption options, see [IEncryptionOptions](../interfaces/_typings_interface_index_.iencryptionoptions.md) for more details |
+| Name      | Type                                                                                                                                            | Default | Description                                                                                                                                                                              |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `text`    | string                                                                                                                                          | -       | string that will be encrypted                                                                                                                                                            |
+| `key`     | string                                                                                                                                          | -       | (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data, please store it in the safe places                                                                      |
+| `options` | [IEncryptionOptions](https://github.com/RizkyArifNur/strong-cryptor/tree/master/doc/interfaces/_typings_interface_index_.iencryptionoptions.md) | {}      | encryption options, see [IEncryptionOptions](https://github.com/RizkyArifNur/strong-cryptor/tree/master/doc/interfaces/_typings_interface_index_.iencryptionoptions.md) for more details |
 
 **Returns:** _string_
 
@@ -111,7 +115,7 @@ return encrypted string with selected encoding
 
 ### decrypt
 
-▸ **decrypt**(`encryptedString`: string, `key`: string, `options`: [IDecryptionOptions](../interfaces/_typings_interface_index_.idecryptionoptions.md)): _string_
+▸ **decrypt**(`encryptedString`: string, `key`: string, `options`: [IDecryptionOptions](https://github.com/RizkyArifNur/strong-cryptor/tree/master/doc/interfaces/_typings_interface_index_.idecryptionoptions.md)): _string_
 
 _Defined in [decryptor.ts:44](https://github.com/RizkyArifNur/strong-cryptor/blob/6f3177b/src/decryptor.ts#L44)_
 
@@ -119,11 +123,11 @@ decrypt the encrypted data from strong-cryptor
 
 **Parameters:**
 
-| Name              | Type                                                                                | Default | Description                                                                                                                                                    |
-| ----------------- | ----------------------------------------------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `encryptedString` | string                                                                              | -       | -                                                                                                                                                              |
-| `key`             | string                                                                              | -       | (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data (must be same with the encryption process), please store it in the safe places |
-| `options`         | [IDecryptionOptions](../interfaces/_typings_interface_index_.idecryptionoptions.md) | {}      | decryption options, see [IDecryptionOptions](../interfaces/_typings_interface_index_.idecryptionoptions.md) for more details                                   |
+| Name              | Type                                                                                                                                            | Default | Description                                                                                                                                                                              |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `encryptedString` | string                                                                                                                                          | -       | -                                                                                                                                                                                        |
+| `key`             | string                                                                                                                                          | -       | (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data (must be same with the encryption process), please store it in the safe places                           |
+| `options`         | [IDecryptionOptions](https://github.com/RizkyArifNur/strong-cryptor/tree/master/doc/interfaces/_typings_interface_index_.idecryptionoptions.md) | {}      | decryption options, see [IDecryptionOptions](https://github.com/RizkyArifNur/strong-cryptor/tree/master/doc/interfaces/_typings_interface_index_.idecryptionoptions.md) for more details |
 
 **Returns:** _string_
 
@@ -145,7 +149,7 @@ return a 32 characters string
 
 ---
 
-For more documentation you can see the [Doc](https://github.com/RizkyArifNur/strong-cryptor/tree/master/docs) folder.
+For more documentation you can see the [Doc](https://github.com/RizkyArifNur/strong-cryptor/tree/master/doc) folder.
 
 ## Using `encrypt()` and `decrypt()`
 
