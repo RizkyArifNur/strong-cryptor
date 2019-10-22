@@ -39,7 +39,7 @@ with strong-cryptor every encryption process will have different result, even th
 ## Changes Log (What's New)
 
 **What's New in 2.1.0**
-
+ 
 - Simplify function parameters to encryption/decryption options object
 - Add new feature to set the encryption count(how many times the encryption/decryption run)
 
@@ -243,3 +243,4 @@ We use [SemVer](http://semver.org/) for version management and [semantic-release
 - Rizky Arif Nur Choir - [RizkyArifNur](https://github.com/RizkyArifNur)
 
 See also the list of [contributors](https://github.com/RizkyArifNur/strong-cryptor/graphs/contributors) who participated in this project.
+.
