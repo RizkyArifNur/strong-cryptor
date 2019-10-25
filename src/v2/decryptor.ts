@@ -1,5 +1,5 @@
 import crypto from 'crypto'
-import fs from 'fs'
+import fs, { readFileSync } from 'fs'
 import { ALGORITHM } from '../config'
 import { InvalidKeyError, MalformatedError } from '../provider/'
 import { base64Regex, hexRegex } from '../regex'
@@ -76,6 +76,47 @@ export function decrypt<T extends IDecryptionOptions>(
   let stringResult = ''
   let bufferResult = Buffer.from('')
   const encoding = options.encoding || 'base64'
+  for (let i = 1; i <= encryptionCount; i++) {
+    if (i === encryptionCount && options.toBuffer) {
+      bufferResult = bufferDecryptor(data, key, encoding)
+      continue
+    } else if (i === encryptionCount && !options.toBuffer) {
+      stringResult = stringDecryptor(data, key, encoding)
+    }
+    data = stringDecryptor(data, key, encoding)
+  }
+
+  if (options.toBuffer) {
+    if (options.writeToFile) {
+      fs.writeFileSync(options.writeToFile as string, bufferResult)
+    }
+    return bufferResult as BufferAndString<T> // escaping typing error
+  } else {
+    if (options.writeToFile) {
+      fs.writeFileSync(options.writeToFile as string, stringResult)
+    }
+    return stringResult as BufferAndString<T> // escaping typing error
+  }
+}
+
+/**
+ * decrypt the encrypted data from strong-cryptor
+ * @param encryptedData encrypted string
+ * @param key (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data (must be same with the encryption process), please store it in the safe places
+ * @param options decryption options, see [[IDecryptionOptions]] for more details
+ * @returns return decrypted string
+ */
+export function decryptFile<T extends IDecryptionOptions>(
+  filePath: string,
+  key: string,
+  options: Partial<Required<T>> = {} as T
+): BufferAndString<T> {
+  const encryptionCount = options.encryptionCount || 1
+  let stringResult = ''
+  let bufferResult = Buffer.from('')
+  const encoding = options.encoding || 'base64'
+  // @ts-ignore
+  let data = Buffer.from(readFileSync(filePath), encoding).toString()
   for (let i = 1; i <= encryptionCount; i++) {
     if (i === encryptionCount && options.toBuffer) {
       bufferResult = bufferDecryptor(data, key, encoding)
