@@ -41,7 +41,11 @@ export interface IDecryptionOptions {
    * file path to write the result of decryption
    */
   writeToFile?: string
-
+}
+/**
+ * options that wil be used in decryption process
+ */
+export interface IToBufferOptions {
   /**
    * return buffer instead of string, use this if you're encrypting a buffer/file
    */

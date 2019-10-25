@@ -3,14 +3,14 @@ import fs, { readFileSync } from 'fs'
 import { ALGORITHM } from '../config'
 import { InvalidKeyError, MalformatedError } from '../provider/'
 import { base64Regex, hexRegex } from '../regex'
-import { BufferAndString, Encoding, IDecryptionOptions } from '../typings'
+import { BufferAndString, Encoding, IDecryptionOptions, IToBufferOptions } from '../typings'
 import { getIvAndEncryptedDataOnly } from '../utils'
 /**
  * decrypt the encrypted data from strong-cryptor to string
- * @param encryptedData encrypted string
- * @param key (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data (must be same with the encryption process), please store it in the safe places
- * @param encoding string/text encoding you can choose `base64`(default) or `hex` (must be same with the encryption process)
- * @returns return decrypted string
+ * @param {string} encryptedData encrypted string
+ * @param {string} key (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data (must be same with the encryption process), please store it in the safe places
+ * @param {Encoding} encoding string/text encoding you can choose `base64`(default) or `hex` (must be same with the encryption process)
+ * @returns {string} return decrypted string
  */
 function stringDecryptor(encryptedData: string, key: string, encoding: Encoding = 'base64') {
   if (key.length !== 32) {
@@ -36,7 +36,14 @@ function stringDecryptor(encryptedData: string, key: string, encoding: Encoding 
   }
 }
 
-export function bufferDecryptor(encryptedData: string, key: string, encoding: Encoding = 'base64'): Buffer {
+/**
+ * decrypt the encrypted data from strong-cryptor to Buffer
+ * @param {string} encryptedData encrypted string
+ * @param {string} key (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data (must be same with the encryption process), please store it in the safe places
+ * @param {Encoding} encoding string/text encoding you can choose `base64`(default) or `hex` (must be same with the encryption process)
+ * @returns {Buffer} return decrypted data as a Buffer
+ */
+function bufferDecryptor(encryptedData: string, key: string, encoding: Encoding = 'base64'): Buffer {
   if (key.length !== 32) {
     throw new InvalidKeyError('Key must be 32 characters')
   }
@@ -61,15 +68,15 @@ export function bufferDecryptor(encryptedData: string, key: string, encoding: En
 
 /**
  * decrypt the encrypted data from strong-cryptor
- * @param encryptedData encrypted string
- * @param key (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data (must be same with the encryption process), please store it in the safe places
- * @param options decryption options, see [[IDecryptionOptions]] for more details
- * @returns return decrypted string
+ * @param {string} encryptedData encrypted string
+ * @param {string} key (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data (must be same with the encryption process), please store it in the safe places
+ * @param {IDecryptionOptions} options decryption options, see [[IDecryptionOptions]] for more details
+ * @returns {string|Buffer} return decrypted string/Buffer
  */
-export function decrypt<T extends IDecryptionOptions>(
+export function decrypt<T extends IToBufferOptions>(
   encryptedString: string,
   key: string,
-  options: Partial<Required<T>> = {} as T
+  options: T & IDecryptionOptions = {} as T
 ): BufferAndString<T> {
   const encryptionCount = options.encryptionCount || 1
   let data = encryptedString
@@ -88,28 +95,28 @@ export function decrypt<T extends IDecryptionOptions>(
 
   if (options.toBuffer) {
     if (options.writeToFile) {
-      fs.writeFileSync(options.writeToFile as string, bufferResult)
+      fs.writeFileSync(options.writeToFile, bufferResult)
     }
     return bufferResult as BufferAndString<T> // escaping typing error
   } else {
     if (options.writeToFile) {
-      fs.writeFileSync(options.writeToFile as string, stringResult)
+      fs.writeFileSync(options.writeToFile, stringResult)
     }
     return stringResult as BufferAndString<T> // escaping typing error
   }
 }
 
 /**
- * decrypt the encrypted data from strong-cryptor
- * @param encryptedData encrypted string
- * @param key (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data (must be same with the encryption process), please store it in the safe places
- * @param options decryption options, see [[IDecryptionOptions]] for more details
- * @returns return decrypted string
+ * decrypt file that already encrypted from strong-cryptor
+ * @param {string} filePath path to file
+ * @param {string} key (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data (must be same with the encryption process), please store it in the safe places
+ * @param {IDecryptionOptions} options decryption options, see [[IDecryptionOptions]] for more details
+ * @returns {string|Buffer} return decrypted string/Buffer
  */
-export function decryptFile<T extends IDecryptionOptions>(
+export function decryptFile<T extends Required<IToBufferOptions>>(
   filePath: string,
   key: string,
-  options: Partial<Required<T>> = {} as T
+  options: Partial<T> & IDecryptionOptions = {} as T
 ): BufferAndString<T> {
   const encryptionCount = options.encryptionCount || 1
   let stringResult = ''
@@ -129,12 +136,12 @@ export function decryptFile<T extends IDecryptionOptions>(
 
   if (options.toBuffer) {
     if (options.writeToFile) {
-      fs.writeFileSync(options.writeToFile as string, bufferResult)
+      fs.writeFileSync(options.writeToFile, bufferResult)
     }
     return bufferResult as BufferAndString<T> // escaping typing error
   } else {
     if (options.writeToFile) {
-      fs.writeFileSync(options.writeToFile as string, stringResult)
+      fs.writeFileSync(options.writeToFile, stringResult)
     }
     return stringResult as BufferAndString<T> // escaping typing error
   }
