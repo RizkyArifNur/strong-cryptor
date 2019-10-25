@@ -45,6 +45,10 @@ export class Decryptor {
     options: Partial<T> & Partial<IDecryptionOptionsClassBase> = this.options as T & IDecryptionOptionsClassBase
   ): BufferAndString<T> {
     const key = options.key || this.options.key
+
+    if (key.length !== 32 || options.key === '') {
+      throw new InvalidKeyError('Key must be 32 characters')
+    }
     const encryptionCount = options.encryptionCount || 1
     let data = encryptedString
     let stringResult = ''
@@ -85,6 +89,10 @@ export class Decryptor {
     options: Partial<T> & Partial<IDecryptionOptionsClassBase> = this.options as T & IDecryptionOptionsClassBase
   ): BufferAndString<T> {
     const key = options.key || this.options.key
+    if (key.length !== 32 || options.key === '') {
+      throw new InvalidKeyError('Key must be 32 characters')
+    }
+
     const encryptionCount = options.encryptionCount || 1
     let stringResult = ''
     let bufferResult = Buffer.from('')

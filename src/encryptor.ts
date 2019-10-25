@@ -47,6 +47,9 @@ export class Encryptor {
    */
   encrypt(data: string | Buffer, options: Partial<IEncryptionOptionsClassBase> = this.options): string {
     const key = options.key || this.options.key
+    if (key.length !== 32 || options.key === '') {
+      throw new InvalidKeyError('Key must be 32 characters')
+    }
     const encryptionCount = options.encryptionCount || 1
     const encoding = options.encoding || 'base64'
     let result = ''
@@ -72,6 +75,9 @@ export class Encryptor {
    */
   encryptFile(pathToFile: string, options: Partial<IEncryptionOptionsClassBase> = this.options): string {
     const key = options.key || this.options.key
+    if (key.length !== 32 || options.key === '') {
+      throw new InvalidKeyError('Key must be 32 characters')
+    }
     const encryptionCount = options.encryptionCount || 1
     const encoding = options.encoding || 'base64'
     // @ts-ignore
