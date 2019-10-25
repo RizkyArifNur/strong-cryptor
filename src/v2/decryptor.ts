@@ -66,10 +66,10 @@ export function bufferDecryptor(encryptedData: string, key: string, encoding: En
  * @param options decryption options, see [[IDecryptionOptions]] for more details
  * @returns return decrypted string
  */
-export function decrypt<T extends Required<IDecryptionOptions>>(
+export function decrypt<T extends IDecryptionOptions>(
   encryptedString: string,
   key: string,
-  options: Partial<T> = {} as T
+  options: Partial<Required<T>> = {} as T
 ): BufferAndString<T> {
   const encryptionCount = options.encryptionCount || 1
   let data = encryptedString
@@ -88,12 +88,12 @@ export function decrypt<T extends Required<IDecryptionOptions>>(
 
   if (options.toBuffer) {
     if (options.writeToFile) {
-      fs.writeFileSync(options.writeToFile, bufferResult)
+      fs.writeFileSync(options.writeToFile as string, bufferResult)
     }
     return bufferResult as BufferAndString<T> // escaping typing error
   } else {
     if (options.writeToFile) {
-      fs.writeFileSync(options.writeToFile, stringResult)
+      fs.writeFileSync(options.writeToFile as string, stringResult)
     }
     return stringResult as BufferAndString<T> // escaping typing error
   }
