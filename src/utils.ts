@@ -38,3 +38,7 @@ export function removeBase64Padding(encodedString: string) {
 export function genKey(): string {
   return crypto.randomBytes(16).toString('hex')
 }
+
+export function getDeprecateMessage(functionName: string, oldVersion: string, newVersion: string) {
+  return `\x1b[33m ${functionName}() is deprecated in version ${oldVersion} and will be deleted in version ${newVersion}, please use Class Base instead \x1b[0m`
+}
