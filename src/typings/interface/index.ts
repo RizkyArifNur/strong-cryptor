@@ -51,3 +51,16 @@ export interface IToBufferOptions {
    */
   toBuffer?: boolean
 }
+
+/**
+ * options that wil be used in encryption process in new Class Base Model
+ */
+export interface IEncryptionOptionsClassBase extends IEncryptionOptions {
+  key: string
+}
+/**
+ * options that wil be used in decryption process in new Class Base Model
+ */
+export interface IDecryptionOptionsClassBase extends IDecryptionOptions, IToBufferOptions {
+  key: string
+}
