@@ -17,6 +17,11 @@ export interface IEncryptionOptions {
    * @encoding `base64` or `hex` encoding that will be used for encryption process
    */
   encoding?: Encoding
+
+  /**
+   * file path to write the result of encryption
+   */
+  writeToFile?: string
 }
 
 /**
@@ -31,4 +36,14 @@ export interface IDecryptionOptions {
    * @encoding `base64` or `hex` encoding that will be used for decryption process
    */
   encoding?: Encoding
+
+  /**
+   * file path to write the result of decryption
+   */
+  writeToFile?: string
+
+  /**
+   * return buffer instead of string, use this if you're encrypting a buffer/file
+   */
+  toBuffer?: boolean
 }
