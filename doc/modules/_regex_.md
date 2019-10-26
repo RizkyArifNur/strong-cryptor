@@ -16,7 +16,7 @@
 
 • **base64Regex**: *RegExp* =  /^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2})?(={1,2})?$/
 
-*Defined in [regex.ts:3](https://github.com/RizkyArifNur/strong-cryptor/blob/6f3177b/src/regex.ts#L3)*
+*Defined in [regex.ts:3](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/regex.ts#L3)*
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 • **base64RegexValidSeparator**: *RegExp* =  /^[a-zA-Z0-9\+=/]+$/
 
-*Defined in [regex.ts:2](https://github.com/RizkyArifNur/strong-cryptor/blob/6f3177b/src/regex.ts#L2)*
+*Defined in [regex.ts:2](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/regex.ts#L2)*
 
 ___
 
@@ -32,4 +32,4 @@ ___
 
 • **hexRegex**: *RegExp* =  /^[0-9A-Fa-f]+$/
 
-*Defined in [regex.ts:1](https://github.com/RizkyArifNur/strong-cryptor/blob/6f3177b/src/regex.ts#L1)*
+*Defined in [regex.ts:1](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/regex.ts#L1)*

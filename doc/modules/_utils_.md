@@ -7,6 +7,7 @@
 ### Functions
 
 * [genKey](_utils_.md#genkey)
+* [getDeprecateMessage](_utils_.md#getdeprecatemessage)
 * [getIvAndEncryptedDataOnly](_utils_.md#getivandencrypteddataonly)
 * [removeBase64Padding](_utils_.md#removebase64padding)
 
@@ -16,7 +17,7 @@
 
 ▸ **genKey**(): *string*
 
-*Defined in [utils.ts:38](https://github.com/RizkyArifNur/strong-cryptor/blob/6f3177b/src/utils.ts#L38)*
+*Defined in [utils.ts:38](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/utils.ts#L38)*
 
 generate random 256bits(32 characters) key
 
@@ -26,11 +27,29 @@ return a 32 characters string
 
 ___
 
+###  getDeprecateMessage
+
+▸ **getDeprecateMessage**(`functionName`: string, `oldVersion`: string, `newVersion`: string): *string*
+
+*Defined in [utils.ts:42](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/utils.ts#L42)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`functionName` | string |
+`oldVersion` | string |
+`newVersion` | string |
+
+**Returns:** *string*
+
+___
+
 ###  getIvAndEncryptedDataOnly
 
 ▸ **getIvAndEncryptedDataOnly**(`encryptedData`: string, `encoding`: [Encoding](_typings_index_.md#encoding)): *[IIvAndEncryptedData](../interfaces/_typings_interface_index_.iivandencrypteddata.md)*
 
-*Defined in [utils.ts:10](https://github.com/RizkyArifNur/strong-cryptor/blob/6f3177b/src/utils.ts#L10)*
+*Defined in [utils.ts:10](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/utils.ts#L10)*
 
 separate the ivString with the encrypted data string
 
@@ -51,7 +70,7 @@ ___
 
 ▸ **removeBase64Padding**(`encodedString`: string): *string*
 
-*Defined in [utils.ts:30](https://github.com/RizkyArifNur/strong-cryptor/blob/6f3177b/src/utils.ts#L30)*
+*Defined in [utils.ts:30](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/utils.ts#L30)*
 
 remove padding( `=` | equals sign) for string that encoded with base64
 
