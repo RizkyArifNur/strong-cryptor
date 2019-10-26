@@ -15,7 +15,7 @@
 
 • **ALGORITHM**: *"aes-256-cbc"* = "aes-256-cbc"
 
-*Defined in [config.ts:2](https://github.com/RizkyArifNur/strong-cryptor/blob/6f3177b/src/config.ts#L2)*
+*Defined in [config.ts:2](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/config.ts#L2)*
 
 ___
 
@@ -23,4 +23,4 @@ ___
 
 • **IV_LENGTH**: *16* = 16
 
-*Defined in [config.ts:1](https://github.com/RizkyArifNur/strong-cryptor/blob/6f3177b/src/config.ts#L1)*
+*Defined in [config.ts:1](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/config.ts#L1)*

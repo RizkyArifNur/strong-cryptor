@@ -1,3 +1,4 @@
-export * from './decryptor'
-export * from './encryptor'
+export * from './deprecated'
 export * from './utils'
+export * from './encryptor'
+export * from './decryptor'

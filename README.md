@@ -6,6 +6,7 @@ Pure javascript/typescript encryption without any depedencies
 ![Travis (.org)](https://img.shields.io/travis/RizkyArifNur/strong-cryptor.svg)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/27eea75361be475789b36c15c25db8bf)](https://www.codacy.com/manual/RizkyArifNur/strong-cryptor?utm_source=github.com&utm_medium=referral&utm_content=RizkyArifNur/strong-cryptor&utm_campaign=Badge_Grade)
 <br/>
+[![npm version](https://badge.fury.io/js/strong-cryptor.svg)](https://badge.fury.io/js/strong-cryptor)
 
 **_strong-cryptor_** is lightweight utility to manage strong encryption and decryption with **aes-256-cbc** algorithm, strong-cryptor not using any depedencies to process the encryption and decryption, with **_strong-cryptor_** you can simplify the process of encryption and decryption as simple as just calling `encrypt()` and `decrypt` function. This library is pure Javascript library built with Typescript targeting ECMAScript 5(ES5), so it's compatible with most Node.Js backend or Javascript frontend applications.
 
@@ -15,16 +16,16 @@ Pure javascript/typescript encryption without any depedencies
   - [List of Contents](#list-of-contents)
   - [Background](#background)
   - [Changes Log (What's New)](#changes-log-whats-new)
+  - [Deprecation](#deprecation)
   - [Basic Concept](#basic-concept)
     - [Encryption Concept](#encryption-concept)
     - [Encryption Count Concept](#encryption-count-concept)
   - [Installation](#installation)
   - [Documentations](#documentation)
-    - [`encrypt()`](#encrypt)
-    - [`decrypt()`](#decrypt)
-    - [`genKey()`](#genKey)
-  - [Using Encyrpt and Decrypt](#using-encrypt-and-decrypt)
+  - [Basic Encryption](#basic-encryption)
   - [Using Encryption Count](#using-encryption-count)
+  - [File Encryption](#file-encryption)
+  - [Write to File](#write-to-file)
   - [Generate Key](#generate-key)
   - [Built With](#built-with)
   - [Contribution](#contribution)
@@ -38,12 +39,17 @@ with strong-cryptor every encryption process will have different result, even th
 
 ## Changes Log (What's New)
 
-**What's New in 2.1.0**
- 
-- Simplify function parameters to encryption/decryption options object
-- Add new feature to set the encryption count(how many times the encryption/decryption run)
+**What's New in 2.2.0**
+
+- File encryption support.
+- Add new feature to write the result of encryption/decryption to a file.
+- Change function base to class base.
 
 For full changelog, please refers to [Release](https://github.com/RizkyArifNur/strong-cryptor/releases) Page.
+
+## Deprecation
+
+The old `encrypt()` and `decrypt()` function are deprecated, and will be fully removed in version 3.0.0, please use class base instead.
 
 ## Basic Concept
 
@@ -89,126 +95,116 @@ yarn add strong-cryptor
 
 ## Documentation
 
-List of **_strong-cryptor_** functions.
+For full documentation please refers to [Doc](https://github.com/RizkyArifNur/strong-cryptor/tree/master/doc) folder.
 
-### encrypt
+## Basic Encryption
 
-▸ **encrypt**(`text`: string, `key`: string, `options`: [IEncryptionOptions](https://github.com/RizkyArifNur/strong-cryptor/tree/master/doc/interfaces/_typings_interface_index_.iencryptionoptions.md)): _string_
-
-_Defined in [encryptor.ts:45](https://github.com/RizkyArifNur/strong-cryptor/blob/6f3177b/src/encryptor.ts#L45)_
-
-encrypt the given text with aes-256-cbc encryption algorithm
-
-**Parameters:**
-
-| Name      | Type                                                                                                                                            | Default | Description                                                                                                                                                                              |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `text`    | string                                                                                                                                          | -       | string that will be encrypted                                                                                                                                                            |
-| `key`     | string                                                                                                                                          | -       | (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data, please store it in the safe places                                                                      |
-| `options` | [IEncryptionOptions](https://github.com/RizkyArifNur/strong-cryptor/tree/master/doc/interfaces/_typings_interface_index_.iencryptionoptions.md) | {}      | encryption options, see [IEncryptionOptions](https://github.com/RizkyArifNur/strong-cryptor/tree/master/doc/interfaces/_typings_interface_index_.iencryptionoptions.md) for more details |
-
-**Returns:** _string_
-
-return encrypted string with selected encoding
-
----
-
-### decrypt
-
-▸ **decrypt**(`encryptedString`: string, `key`: string, `options`: [IDecryptionOptions](https://github.com/RizkyArifNur/strong-cryptor/tree/master/doc/interfaces/_typings_interface_index_.idecryptionoptions.md)): _string_
-
-_Defined in [decryptor.ts:44](https://github.com/RizkyArifNur/strong-cryptor/blob/6f3177b/src/decryptor.ts#L44)_
-
-decrypt the encrypted data from strong-cryptor
-
-**Parameters:**
-
-| Name              | Type                                                                                                                                            | Default | Description                                                                                                                                                                              |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `encryptedString` | string                                                                                                                                          | -       | -                                                                                                                                                                                        |
-| `key`             | string                                                                                                                                          | -       | (or secret) is 256bits (32 charcters) that used to encrypt dan decrypt the data (must be same with the encryption process), please store it in the safe places                           |
-| `options`         | [IDecryptionOptions](https://github.com/RizkyArifNur/strong-cryptor/tree/master/doc/interfaces/_typings_interface_index_.idecryptionoptions.md) | {}      | decryption options, see [IDecryptionOptions](https://github.com/RizkyArifNur/strong-cryptor/tree/master/doc/interfaces/_typings_interface_index_.idecryptionoptions.md) for more details |
-
-**Returns:** _string_
-
-return decrypted string
-
----
-
-### genKey
-
-▸ **genKey**(): _string_
-
-_Defined in [utils.ts:38](https://github.com/RizkyArifNur/strong-cryptor/blob/6f3177b/src/utils.ts#L38)_
-
-generate random 256bits(32 characters) key
-
-**Returns:** _string_
-
-return a 32 characters string
-
----
-
-For more documentation you can see the [Doc](https://github.com/RizkyArifNur/strong-cryptor/tree/master/doc) folder.
-
-## Using `encrypt()` and `decrypt()`
-
-To use **_strong-cryptor_** encryption first import `encrypt` function from **_strong-cryptor_**
+To use **_strong-cryptor_** encryption first import `Encryptor` class from **_strong-cryptor_**
 
 ```javascript
-import { encrypt } from 'strong-cryptor'
+import { Encryptor } from 'strong-cryptor'
 ```
 
-then encrypt your data with `encrypt(data,key)` function, with the following paramters
+then create a key and new instance of Encryptor class with following parameters
 
-- data - data that will be encrypted
-- key - 256bits or 32 characters key
+- options - encryption options, see [IEncryptionOptionsClassBase](doc/interfaces/_typings_interface_index_.iencryptionoptionsclassbase.md)
 
 ```javascript
-import { encrypt } from 'strong-cryptor'
+import { Encryptor } from 'strong-cryptor'
+const key = 'AHBSGTEUET125STSGBDHDJKXMPLKIU12' // store this key in secure place
+const encryptor = new Encryptor({ key })
+```
+
+then encrypt your data with `encrypt(data)`
+
+```javascript
+import { Encryptor } from 'strong-cryptor'
 const data = 'your sensitive data'
-const key = 'AHBSGTEUET125STSGBDHDJKXMPLKIU12' // please store this key in the safe place
-const encryptedData = encrypt(data, key)
+const key = 'AHBSGTEUET125STSGBDHDJKXMPLKIU12' // store this key in secure place
+const encryptor = new Encryptor({ key })
+const encryptedData = encryptor.encrypt(data)
 ```
 
 The code above will use `aes-256-cbc` encryption algorithm and base64 encoding as default encoding.
 
-And to use **_strong-cryptor_** decryption you need import `decrypt` function from **_strong-cryptor_**
+And to use **_strong-cryptor_** decryption you need import `Decryptor` class from **_strong-cryptor_**
 
 ```javascript
-import { decrypt } from 'strong-cryptor'
+import { Decryptor } from 'strong-cryptor'
 ```
 
-Then decrypt your data with `decrypt(encryptedData,key)` function, with the following parameters.
+Then create new instance of Encryptor class with following parameters
 
-- data - data that already encrypted by **_strong-cryptor_** before
-- key - 256bits or 32 characters key that used by encryption process before
+- options - encryption options, see [IDecryptionOptionsClassBase](doc/interfaces/_typings_interface_index_.idecryptionoptionsclassbase.md)
 
 Full code :
 
 ```javascript
-import { encrypt, decrypt } from 'strong-cryptor'
+import { Encryptor } from 'strong-cryptor'
 const data = 'your sensitive data'
-const key = 'AHBSGTEUET125STSGBDHDJKXMPLKIU12' // please store this key in the safe place
-const encryptedData = encrypt(data, key)
-const data = decrypt(encryptedData, key) // this will return your actual data `your sensitive data`
+const key = 'AHBSGTEUET125STSGBDHDJKXMPLKIU12' // store this key in secure place
+const encryptor = new Encryptor({ key })
+const encryptedData = encryptor.encrypt(data)
+const decryptor = new Decryptor({ key })
+decryptor.decrypt(encryptedData)
 ```
 
 ## Using Encryption Count
 
 To make sure your encrypted data is secure, **_strong-cryptor_** providing a new feature called `Encryption Count`, this feature will encrypt your data as many as you want.
 
-To use this feature you only need to fill up the third parameters(encryption options).
+To use this feature you only need to fill up the encryption options.
 
 ```javascript
-import { encrypt, decrypt } from 'strong-cryptor'
+import { Encryptor } from 'strong-cryptor'
 const data = 'your sensitive data'
-const key = 'AHBSGTEUET125STSGBDHDJKXMPLKIU12' // please store this key in the safe place
-const encryptedData = encrypt(data, key, { encryptionCount: 12 })
-const data = decrypt(encryptedData, key, { encryptionCount: 12 })
+const key = 'AHBSGTEUET125STSGBDHDJKXMPLKIU12' // store this key in secure place
+const encryptor = new Encryptor({ key, encryptionCount: 5 })
+const encryptedData = encryptor.encrypt(data)
+const decryptor = new Decryptor({ key, encryptionCount: 5 })
+decryptor.decrypt(encryptedData)
+```
+
+Or
+
+```javascript
+import { Encryptor } from 'strong-cryptor'
+const data = 'your sensitive data'
+const key = 'AHBSGTEUET125STSGBDHDJKXMPLKIU12' // store this key in secure place
+const encryptor = new Encryptor({ key })
+const encryptedData = encryptor.encrypt(data, { encryptionCount: 5 })
+const decryptor = new Decryptor({ key })
+decryptor.decrypt(encryptedData, { encryptionCount: 5 })
 ```
 
 > Make sure that you provide the encryptionCount at the decryption process too.
+
+## File Encryption
+
+From version 2.2.0 **_strong-cryptor_** support for encrypting a file.
+
+```javascript
+import { Encryptor } from 'strong-cryptor'
+const key = 'AHBSGTEUET125STSGBDHDJKXMPLKIU12' // store this key in secure place
+const encryptor = new Encryptor({ key })
+const encryptedData = encryptor.encryptFile('path_to_your_file')
+const decryptor = new Decryptor({ key })
+decryptor.decryptFile(encryptedData, { toBuffer: true })
+```
+
+## Write to File
+
+If you want to write your encryption/decryption result to some file, just fill up `writeToFile` property in encryption/decryption options.
+
+```javascript
+import { Encryptor } from 'strong-cryptor'
+const data = 'your sensitive data'
+const key = 'AHBSGTEUET125STSGBDHDJKXMPLKIU12' // store this key in secure place
+const encryptor = new Encryptor({ key })
+const encryptedData = encryptor.encrypt(data, { writeToFile: 'path_to_file' })
+const decryptor = new Decryptor({ key })
+decryptor.decrypt(encryptedData, { writeToFile: 'path_to_file' })
+```
 
 ## Generate Key
 

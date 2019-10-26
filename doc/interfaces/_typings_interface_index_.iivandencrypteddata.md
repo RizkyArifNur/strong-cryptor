@@ -19,7 +19,7 @@
 
 • **encryptedDataString**: *string*
 
-*Defined in [typings/interface/index.ts:5](https://github.com/RizkyArifNur/strong-cryptor/blob/6f3177b/src/typings/interface/index.ts#L5)*
+*Defined in [typings/interface/index.ts:5](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/typings/interface/index.ts#L5)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **ivString**: *string*
 
-*Defined in [typings/interface/index.ts:4](https://github.com/RizkyArifNur/strong-cryptor/blob/6f3177b/src/typings/interface/index.ts#L4)*
+*Defined in [typings/interface/index.ts:4](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/typings/interface/index.ts#L4)*
