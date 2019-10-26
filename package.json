@@ -15,7 +15,7 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/*.ts\" \"__test__/*.ts\"",
     "start": "ts-node src",
-    "test": "jest --verbose",
+    "test": "jest --verbose --runInBand",
     "start-example": "ts-node example/index.ts",
     "semantic-release": "semantic-release",
     "gen-doc": "typedoc --plugin typedoc-plugin-markdown --out ./doc ./src",
