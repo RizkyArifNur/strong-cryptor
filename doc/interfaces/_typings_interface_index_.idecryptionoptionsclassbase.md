@@ -30,7 +30,7 @@ options that wil be used in decryption process in new Class Base Model
 
 *Inherited from [IDecryptionOptions](_typings_interface_index_.idecryptionoptions.md).[encoding](_typings_interface_index_.idecryptionoptions.md#optional-encoding)*
 
-*Defined in [typings/interface/index.ts:38](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/typings/interface/index.ts#L38)*
+*Defined in [typings/interface/index.ts:38](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/typings/interface/index.ts#L38)*
 
 **`encoding`** `base64` or `hex` encoding that will be used for decryption process
 
@@ -42,7 +42,7 @@ ___
 
 *Inherited from [IDecryptionOptions](_typings_interface_index_.idecryptionoptions.md).[encryptionCount](_typings_interface_index_.idecryptionoptions.md#optional-encryptioncount)*
 
-*Defined in [typings/interface/index.ts:34](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/typings/interface/index.ts#L34)*
+*Defined in [typings/interface/index.ts:34](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/typings/interface/index.ts#L34)*
 
 **`encryptioncount`** number that represent how many decryption will be executed
 
@@ -52,7 +52,9 @@ ___
 
 • **key**: *string*
 
-*Defined in [typings/interface/index.ts:65](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/typings/interface/index.ts#L65)*
+*Defined in [typings/interface/index.ts:71](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/typings/interface/index.ts#L71)*
+
+**`key`** 256bits (32 charcters) string that used to encrypt dan decrypt the data (must be same with the encryption process), please store it in the safe places
 
 ___
 
@@ -62,7 +64,7 @@ ___
 
 *Inherited from [IToBufferOptions](_typings_interface_index_.itobufferoptions.md).[toBuffer](_typings_interface_index_.itobufferoptions.md#optional-tobuffer)*
 
-*Defined in [typings/interface/index.ts:52](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/typings/interface/index.ts#L52)*
+*Defined in [typings/interface/index.ts:52](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/typings/interface/index.ts#L52)*
 
 return buffer instead of string, use this if you're encrypting a buffer/file
 
@@ -74,6 +76,6 @@ ___
 
 *Inherited from [IDecryptionOptions](_typings_interface_index_.idecryptionoptions.md).[writeToFile](_typings_interface_index_.idecryptionoptions.md#optional-writetofile)*
 
-*Defined in [typings/interface/index.ts:43](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/typings/interface/index.ts#L43)*
+*Defined in [typings/interface/index.ts:43](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/typings/interface/index.ts#L43)*
 
 file path to write the result of decryption

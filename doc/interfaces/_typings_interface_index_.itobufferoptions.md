@@ -22,6 +22,6 @@ options that wil be used in decryption process
 
 • **toBuffer**? : *undefined | false | true*
 
-*Defined in [typings/interface/index.ts:52](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/typings/interface/index.ts#L52)*
+*Defined in [typings/interface/index.ts:52](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/typings/interface/index.ts#L52)*
 
 return buffer instead of string, use this if you're encrypting a buffer/file

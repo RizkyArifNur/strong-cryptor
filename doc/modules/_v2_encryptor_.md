@@ -16,7 +16,7 @@
 
 ▸ **encrypt**(`data`: string | Buffer, `key`: string, `options`: [IEncryptionOptions](../interfaces/_typings_interface_index_.iencryptionoptions.md)): *string*
 
-*Defined in [v2/encryptor.ts:46](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/v2/encryptor.ts#L46)*
+*Defined in [v2/encryptor.ts:46](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/v2/encryptor.ts#L46)*
 
 encrypt the given text with aes-256-cbc encryption algorithm
 
@@ -38,7 +38,7 @@ ___
 
 ▸ **encryptFile**(`pathToFile`: string, `key`: string, `options`: [IEncryptionOptions](../interfaces/_typings_interface_index_.iencryptionoptions.md)): *string*
 
-*Defined in [v2/encryptor.ts:73](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/v2/encryptor.ts#L73)*
+*Defined in [v2/encryptor.ts:73](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/v2/encryptor.ts#L73)*
 
 encrypt the given text with aes-256-cbc encryption algorithm
 
@@ -60,7 +60,7 @@ ___
 
 ▸ **encryptor**(`data`: string | Buffer, `key`: string, `encoding`: [Encoding](_typings_index_.md#encoding)): *string*
 
-*Defined in [v2/encryptor.ts:14](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/v2/encryptor.ts#L14)*
+*Defined in [v2/encryptor.ts:14](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/v2/encryptor.ts#L14)*
 
 encrypt the given text with aes-256-cbc encryption algorithm
 

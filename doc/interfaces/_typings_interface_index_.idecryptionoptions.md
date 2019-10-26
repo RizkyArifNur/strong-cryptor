@@ -24,7 +24,7 @@ options that wil be used in decryption process
 
 • **encoding**? : *[Encoding](../modules/_typings_index_.md#encoding)*
 
-*Defined in [typings/interface/index.ts:38](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/typings/interface/index.ts#L38)*
+*Defined in [typings/interface/index.ts:38](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/typings/interface/index.ts#L38)*
 
 **`encoding`** `base64` or `hex` encoding that will be used for decryption process
 
@@ -34,7 +34,7 @@ ___
 
 • **encryptionCount**? : *undefined | number*
 
-*Defined in [typings/interface/index.ts:34](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/typings/interface/index.ts#L34)*
+*Defined in [typings/interface/index.ts:34](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/typings/interface/index.ts#L34)*
 
 **`encryptioncount`** number that represent how many decryption will be executed
 
@@ -44,6 +44,6 @@ ___
 
 • **writeToFile**? : *undefined | string*
 
-*Defined in [typings/interface/index.ts:43](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/typings/interface/index.ts#L43)*
+*Defined in [typings/interface/index.ts:43](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/typings/interface/index.ts#L43)*
 
 file path to write the result of decryption

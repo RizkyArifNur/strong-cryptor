@@ -27,7 +27,7 @@ options that wil be used in encryption process in new Class Base Model
 
 *Inherited from [IEncryptionOptions](_typings_interface_index_.iencryptionoptions.md).[encoding](_typings_interface_index_.iencryptionoptions.md#optional-encoding)*
 
-*Defined in [typings/interface/index.ts:19](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/typings/interface/index.ts#L19)*
+*Defined in [typings/interface/index.ts:19](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/typings/interface/index.ts#L19)*
 
 **`encoding`** `base64` or `hex` encoding that will be used for encryption process
 
@@ -39,7 +39,7 @@ ___
 
 *Inherited from [IEncryptionOptions](_typings_interface_index_.iencryptionoptions.md).[encryptionCount](_typings_interface_index_.iencryptionoptions.md#optional-encryptioncount)*
 
-*Defined in [typings/interface/index.ts:15](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/typings/interface/index.ts#L15)*
+*Defined in [typings/interface/index.ts:15](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/typings/interface/index.ts#L15)*
 
 **`encryptioncount`** number that represent how many encryption will be executed
 
@@ -49,7 +49,9 @@ ___
 
 • **key**: *string*
 
-*Defined in [typings/interface/index.ts:59](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/typings/interface/index.ts#L59)*
+*Defined in [typings/interface/index.ts:62](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/typings/interface/index.ts#L62)*
+
+**`key`** 256bits (32 charcters) string that used to encrypt dan decrypt the data (must be same with the encryption process), please store it in the safe places
 
 ___
 
@@ -59,6 +61,6 @@ ___
 
 *Inherited from [IEncryptionOptions](_typings_interface_index_.iencryptionoptions.md).[writeToFile](_typings_interface_index_.iencryptionoptions.md#optional-writetofile)*
 
-*Defined in [typings/interface/index.ts:24](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/typings/interface/index.ts#L24)*
+*Defined in [typings/interface/index.ts:24](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/typings/interface/index.ts#L24)*
 
 file path to write the result of encryption

@@ -30,7 +30,7 @@
 
 \+ **new ErrorProvider**(): *[ErrorProvider](_provider_error_provider_.errorprovider.md)*
 
-*Defined in [provider/error-provider.ts:7](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/provider/error-provider.ts#L7)*
+*Defined in [provider/error-provider.ts:7](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/provider/error-provider.ts#L7)*
 
 **Returns:** *[ErrorProvider](_provider_error_provider_.errorprovider.md)*
 
@@ -40,7 +40,7 @@
 
 • **code**: *[ErrorCode](../modules/_typings_index_.md#errorcode)*
 
-*Defined in [provider/error-provider.ts:5](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/provider/error-provider.ts#L5)*
+*Defined in [provider/error-provider.ts:5](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/provider/error-provider.ts#L5)*
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 • **message**: *string*
 
-*Defined in [provider/error-provider.ts:6](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/provider/error-provider.ts#L6)*
+*Defined in [provider/error-provider.ts:6](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/provider/error-provider.ts#L6)*
 
 ___
 
@@ -56,4 +56,4 @@ ___
 
 • **name**: *string* = "StrongCryptorErr"
 
-*Defined in [provider/error-provider.ts:7](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/provider/error-provider.ts#L7)*
+*Defined in [provider/error-provider.ts:7](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/provider/error-provider.ts#L7)*

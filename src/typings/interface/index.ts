@@ -56,11 +56,17 @@ export interface IToBufferOptions {
  * options that wil be used in encryption process in new Class Base Model
  */
 export interface IEncryptionOptionsClassBase extends IEncryptionOptions {
+  /**
+   * @key 256bits (32 charcters) string that used to encrypt dan decrypt the data (must be same with the encryption process), please store it in the safe places
+   */
   key: string
 }
 /**
  * options that wil be used in decryption process in new Class Base Model
  */
 export interface IDecryptionOptionsClassBase extends IDecryptionOptions, IToBufferOptions {
+  /**
+   * @key 256bits (32 charcters) string that used to encrypt dan decrypt the data (must be same with the encryption process), please store it in the safe places
+   */
   key: string
 }

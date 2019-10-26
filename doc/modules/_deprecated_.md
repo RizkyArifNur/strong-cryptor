@@ -17,7 +17,7 @@
 
 • **decrypt**: *[decrypt](_v2_decryptor_.md#decrypt)* =  deprecate(decryptor.decrypt, getDeprecateMessage(decryptor.decrypt.name, v2, v3))
 
-*Defined in [deprecated.ts:15](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/deprecated.ts#L15)*
+*Defined in [deprecated.ts:15](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/deprecated.ts#L15)*
 
 **`deprecated`** since version 2.2.0 and will be deleted in version 3.0.0
 
@@ -27,7 +27,7 @@ ___
 
 • **encrypt**: *[encrypt](_v2_encryptor_.md#encrypt)* =  deprecate(encryptor.encrypt, getDeprecateMessage(encryptor.encrypt.name, v2, v3))
 
-*Defined in [deprecated.ts:11](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/deprecated.ts#L11)*
+*Defined in [deprecated.ts:11](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/deprecated.ts#L11)*
 
 **`deprecated`** since version 2.2.0 and will be deleted in version 3.0.0
 
@@ -37,7 +37,7 @@ ___
 
 • **v2**: *"2.2.0"* = "2.2.0"
 
-*Defined in [deprecated.ts:6](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/deprecated.ts#L6)*
+*Defined in [deprecated.ts:6](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/deprecated.ts#L6)*
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 • **v3**: *"3.0.0"* = "3.0.0"
 
-*Defined in [deprecated.ts:7](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/deprecated.ts#L7)*
+*Defined in [deprecated.ts:7](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/deprecated.ts#L7)*

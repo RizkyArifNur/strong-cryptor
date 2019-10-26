@@ -30,7 +30,7 @@
 
 \+ **new Encryptor**(`options`: [IEncryptionOptionsClassBase](../interfaces/_typings_interface_index_.iencryptionoptionsclassbase.md)): *[Encryptor](_encryptor_.encryptor.md)*
 
-*Defined in [encryptor.ts:8](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/encryptor.ts#L8)*
+*Defined in [encryptor.ts:8](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/encryptor.ts#L8)*
 
 Create new instance of encryptor
 
@@ -48,7 +48,7 @@ Name | Type | Description |
 
 • **options**: *[IEncryptionOptionsClassBase](../interfaces/_typings_interface_index_.iencryptionoptionsclassbase.md)*
 
-*Defined in [encryptor.ts:8](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/encryptor.ts#L8)*
+*Defined in [encryptor.ts:8](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/encryptor.ts#L8)*
 
 ## Methods
 
@@ -56,7 +56,7 @@ Name | Type | Description |
 
 ▸ **encrypt**(`data`: string | Buffer, `options`: Partial‹[IEncryptionOptionsClassBase](../interfaces/_typings_interface_index_.iencryptionoptionsclassbase.md)›): *string*
 
-*Defined in [encryptor.ts:48](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/encryptor.ts#L48)*
+*Defined in [encryptor.ts:48](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/encryptor.ts#L48)*
 
 encrypt the given text with aes-256-cbc encryption algorithm
 
@@ -77,7 +77,7 @@ ___
 
 ▸ **encryptFile**(`pathToFile`: string, `options`: Partial‹[IEncryptionOptionsClassBase](../interfaces/_typings_interface_index_.iencryptionoptionsclassbase.md)›): *string*
 
-*Defined in [encryptor.ts:76](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/encryptor.ts#L76)*
+*Defined in [encryptor.ts:76](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/encryptor.ts#L76)*
 
 encrypt the given text with aes-256-cbc encryption algorithm
 
@@ -98,7 +98,7 @@ ___
 
 ▸ **encryptor**(`data`: string | Buffer, `key`: string, `encoding`: [Encoding](../modules/_typings_index_.md#encoding)): *string*
 
-*Defined in [encryptor.ts:106](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/encryptor.ts#L106)*
+*Defined in [encryptor.ts:106](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/encryptor.ts#L106)*
 
 encrypt the given text with aes-256-cbc encryption algorithm
 
@@ -120,7 +120,7 @@ ___
 
 ▸ **setKey**(`key`: string): *void*
 
-*Defined in [encryptor.ts:26](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/encryptor.ts#L26)*
+*Defined in [encryptor.ts:26](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/encryptor.ts#L26)*
 
 set key for encryption process
 
@@ -138,7 +138,7 @@ ___
 
 ▸ **setOptions**(`options`: Partial‹[IEncryptionOptionsClassBase](../interfaces/_typings_interface_index_.iencryptionoptionsclassbase.md)›): *void*
 
-*Defined in [encryptor.ts:37](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/encryptor.ts#L37)*
+*Defined in [encryptor.ts:37](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/encryptor.ts#L37)*
 
 set options for encryption process
 

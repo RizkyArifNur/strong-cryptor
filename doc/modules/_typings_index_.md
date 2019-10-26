@@ -16,7 +16,7 @@
 
 Ƭ **BufferAndString**: *BufferAndString<T>*
 
-*Defined in [typings/index.ts:5](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/typings/index.ts#L5)*
+*Defined in [typings/index.ts:5](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/typings/index.ts#L5)*
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 Ƭ **Encoding**: *"base64" | "hex"*
 
-*Defined in [typings/index.ts:4](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/typings/index.ts#L4)*
+*Defined in [typings/index.ts:4](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/typings/index.ts#L4)*
 
 ___
 
@@ -32,4 +32,4 @@ ___
 
 Ƭ **ErrorCode**: *"MALFORMATED" | "INVALID_SEPARATOR" | "INVALID_KEY"*
 
-*Defined in [typings/index.ts:3](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/typings/index.ts#L3)*
+*Defined in [typings/index.ts:3](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/typings/index.ts#L3)*

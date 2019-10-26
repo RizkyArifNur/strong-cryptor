@@ -31,7 +31,7 @@
 
 \+ **new Decryptor**(`options`: [IDecryptionOptionsClassBase](../interfaces/_typings_interface_index_.idecryptionoptionsclassbase.md)): *[Decryptor](_decryptor_.decryptor.md)*
 
-*Defined in [decryptor.ts:10](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/decryptor.ts#L10)*
+*Defined in [decryptor.ts:10](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/decryptor.ts#L10)*
 
 **Parameters:**
 
@@ -47,7 +47,7 @@ Name | Type |
 
 • **options**: *[IDecryptionOptionsClassBase](../interfaces/_typings_interface_index_.idecryptionoptionsclassbase.md)*
 
-*Defined in [decryptor.ts:10](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/decryptor.ts#L10)*
+*Defined in [decryptor.ts:10](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/decryptor.ts#L10)*
 
 ## Methods
 
@@ -55,7 +55,7 @@ Name | Type |
 
 ▸ **bufferDecryptor**(`encryptedData`: string, `key`: string, `encoding`: [Encoding](../modules/_typings_index_.md#encoding)): *Buffer*
 
-*Defined in [decryptor.ts:163](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/decryptor.ts#L163)*
+*Defined in [decryptor.ts:163](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/decryptor.ts#L163)*
 
 decrypt the encrypted data from strong-cryptor to Buffer
 
@@ -77,7 +77,7 @@ ___
 
 ▸ **decrypt**<**T**>(`encryptedString`: string, `options`: Partial‹T› & Partial‹[IDecryptionOptionsClassBase](../interfaces/_typings_interface_index_.idecryptionoptionsclassbase.md)›): *[BufferAndString](../modules/_typings_index_.md#bufferandstring)‹T›*
 
-*Defined in [decryptor.ts:43](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/decryptor.ts#L43)*
+*Defined in [decryptor.ts:43](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/decryptor.ts#L43)*
 
 decrypt the encrypted data from strong-cryptor
 
@@ -102,7 +102,7 @@ ___
 
 ▸ **decryptFile**<**T**>(`filePath`: string, `options`: Partial‹T› & Partial‹[IDecryptionOptionsClassBase](../interfaces/_typings_interface_index_.idecryptionoptionsclassbase.md)›): *[BufferAndString](../modules/_typings_index_.md#bufferandstring)‹T›*
 
-*Defined in [decryptor.ts:87](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/decryptor.ts#L87)*
+*Defined in [decryptor.ts:87](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/decryptor.ts#L87)*
 
 decrypt file that already encrypted from strong-cryptor
 
@@ -127,7 +127,7 @@ ___
 
 ▸ **setKey**(`key`: string): *void*
 
-*Defined in [decryptor.ts:22](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/decryptor.ts#L22)*
+*Defined in [decryptor.ts:22](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/decryptor.ts#L22)*
 
 set key for decryption process
 
@@ -145,7 +145,7 @@ ___
 
 ▸ **setOptions**(`options`: Partial‹[IDecryptionOptionsClassBase](../interfaces/_typings_interface_index_.idecryptionoptionsclassbase.md)›): *void*
 
-*Defined in [decryptor.ts:33](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/decryptor.ts#L33)*
+*Defined in [decryptor.ts:33](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/decryptor.ts#L33)*
 
 set options for decryption process
 
@@ -163,7 +163,7 @@ ___
 
 ▸ **stringDecryptor**(`encryptedData`: string, `key`: string, `encoding`: [Encoding](../modules/_typings_index_.md#encoding)): *string*
 
-*Defined in [decryptor.ts:132](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/decryptor.ts#L132)*
+*Defined in [decryptor.ts:132](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/decryptor.ts#L132)*
 
 decrypt the encrypted data from strong-cryptor to string
 

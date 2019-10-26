@@ -28,7 +28,7 @@
 
 *Overrides [ErrorProvider](_provider_error_provider_.errorprovider.md).[constructor](_provider_error_provider_.errorprovider.md#constructor)*
 
-*Defined in [provider/error-provider.ts:21](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/provider/error-provider.ts#L21)*
+*Defined in [provider/error-provider.ts:21](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/provider/error-provider.ts#L21)*
 
 **Parameters:**
 
@@ -46,7 +46,7 @@ Name | Type |
 
 *Inherited from [ErrorProvider](_provider_error_provider_.errorprovider.md).[code](_provider_error_provider_.errorprovider.md#code)*
 
-*Defined in [provider/error-provider.ts:5](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/provider/error-provider.ts#L5)*
+*Defined in [provider/error-provider.ts:5](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/provider/error-provider.ts#L5)*
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 *Inherited from [ErrorProvider](_provider_error_provider_.errorprovider.md).[message](_provider_error_provider_.errorprovider.md#message)*
 
-*Defined in [provider/error-provider.ts:6](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/provider/error-provider.ts#L6)*
+*Defined in [provider/error-provider.ts:6](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/provider/error-provider.ts#L6)*
 
 ___
 
@@ -66,4 +66,4 @@ ___
 
 *Inherited from [ErrorProvider](_provider_error_provider_.errorprovider.md).[name](_provider_error_provider_.errorprovider.md#name)*
 
-*Defined in [provider/error-provider.ts:7](https://github.com/RizkyArifNur/strong-cryptor/blob/2bf2f8d/src/provider/error-provider.ts#L7)*
+*Defined in [provider/error-provider.ts:7](https://github.com/RizkyArifNur/strong-cryptor/blob/0b692aa/src/provider/error-provider.ts#L7)*
