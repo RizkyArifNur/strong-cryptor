@@ -240,3 +240,5 @@ We use [SemVer](http://semver.org/) for version management and [semantic-release
 
 See also the list of [contributors](https://github.com/RizkyArifNur/strong-cryptor/graphs/contributors) who participated in this project.
 .
+
+- rizky manis
