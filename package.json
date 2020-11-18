@@ -29,7 +29,7 @@
     "jest": "^24.8.0",
     "lint-staged": "^9.0.2",
     "prettier": "^1.18.2",
-    "semantic-release": "^15.13.18",
+    "semantic-release": "^17.2.3",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.3.0",
     "tslint": "^5.18.0",
